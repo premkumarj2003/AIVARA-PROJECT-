@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIVARA AI | Health Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div id="landing-view">
+        <nav class="landing-navbar glass animate-down">
+            <div class="logo"><i class="fas fa-robot bounce-icon"></i> <span style="background: linear-gradient(to right, #2563EB, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AIVARA</span></div>
+            <div class="nav-right-group">
+                <a class="nav-link" onclick="scrollToSection('hero-top')"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-link" onclick="scrollToSection('about')"><i class="fas fa-info-circle"></i> About</a>
+                <a class="nav-link" onclick="scrollToSection('contact')"><i class="fas fa-envelope"></i> Contact</a>
+                <a class="nav-link" onclick="scrollToSection('developers')"><i class="fas fa-users"></i> Team</a>
+                <button class="btn-login-aesthetic" onclick="openAuthModal('login')">Login <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+        </nav>
+
+        <header class="landing-hero" id="hero-top">
+            <div class="hero-content animate-up delay-1">
+                <div class="badge-new">✨ AI-Powered Health</div>
+                <h1>Your Personal<br><span class="text-gradient">Health Companion</span></h1>
+                <p>Manage medications, track your wellness, and get instant health advice with AIVARA. Your journey to a healthier life starts here.</p>
+                <button class="btn-primary big-btn" onclick="openAuthModal('signup')">Get Started <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="hero-image animate-up delay-2">
+                <img src="images/new bot.1.png" alt="Yoga Health Illustration" class="floating-img">
+            </div>
+        </header>
+
+        <section id="about" class="landing-section">
+            <div class="section-header"><h2>About AIVARA</h2><p>Intelligent tools designed for your well-being.</p></div>
+            <div class="glass-card about-intro-card">
+                <p class="about-text"><strong>AIVARA</strong> is an AI-powered health assistant designed to support individuals in managing their daily wellbeing with ease and confidence. Built with intelligent technology, AIVARA offers a simple, reliable, and user-friendly experience for anyone looking to stay consistent with their health routines.</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 1.5rem 0;">
+                <h3 style="color: #2563EB; margin-bottom: 0.5rem;">Our Mission</h3>
+                <p class="about-text">Our mission is to make healthcare more accessible, organized, and stress-free by blending smart technology with evidence-based health guidance. We aim to empower people to take control of their health through timely reminders, meaningful insights, and AI-powered support.</p>
+            </div>
+            <h3 class="sub-heading">What AIVARA Offers</h3>
+            <div class="about-grid">
+                <div class="feature-card"><div class="f-icon icon-blue"><i class="fas fa-bell"></i></div><h3>Smart Medicine Reminders</h3><p>Stay on track with your daily doses through intelligent scheduling and timely notifications.</p></div>
+                <div class="feature-card"><div class="f-icon icon-orange"><i class="fas fa-robot"></i></div><h3>AI Health Chatbot</h3><p>Get quick, easy-to-understand answers to medical queries with clear explanations.</p></div>
+                <div class="feature-card"><div class="f-icon icon-green"><i class="fas fa-leaf"></i></div><h3>Daily Guidance</h3><p>Receive personalized suggestions to improve sleep, hydration, nutrition, and stress.</p></div>
+                <div class="feature-card"><div class="f-icon icon-purple"><i class="fas fa-heartbeat"></i></div><h3>Wellness Management</h3><p>AIVARA keeps everything organized — from reminders to health history — all in one place.</p></div>
+            </div>
+            <div class="about-footer-row">
+                <div class="glass-card why-card"><h3>Why AIVARA?</h3><ul class="check-list"><li><i class="fas fa-check-circle"></i> Designed to be your personal health companion</li><li><i class="fas fa-check-circle"></i> Provides structured, safe, and readable medical guidance</li><li><i class="fas fa-check-circle"></i> Supports better habits and routine consistency</li></ul></div>
+                <div class="glass-card disclaimer-card"><div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;"><i class="fas fa-exclamation-triangle" style="color: #b45309; font-size: 1.5rem;"></i><h4 style="color: #b45309; margin:0;">Disclaimer</h4></div><p style="color: #92400e; line-height: 1.5;">AIVARA provides general medical information and guidance. It is not a replacement for professional medical diagnosis or emergency care.</p></div>
+            </div>
+        </section>
+
+        <section id="advice" class="landing-section" style="background: #f8fafc;">
+            <div class="section-header"><h2>Daily Health Wisdom</h2><p>Simple habits for a better life.</p></div>
+            <div class="features-grid">
+                <div class="advice-box"><div class="advice-img"><i class="fas fa-sun" style="color: #f59e0b;"></i></div><h3>Morning Routine</h3><p>Start your day with a glass of water and 5 minutes of stretching to wake up your body.</p></div>
+                <div class="advice-box"><div class="advice-img"><i class="fas fa-carrot" style="color: #ea580c;"></i></div><h3>Balanced Diet</h3><p>Fill half your plate with vegetables. Colorful plates mean diverse nutrients!</p></div>
+                <div class="advice-box"><div class="advice-img"><i class="fas fa-moon" style="color: #4f46e5;"></i></div><h3>Sleep Hygiene</h3><p>Avoid screens 30 minutes before bed for deeper, more restorative sleep.</p></div>
+            </div>
+        </section>
+
+        <section id="contact" class="landing-section">
+            <div class="contact-container glass">
+                <div class="contact-text">
+                    <h2>Get in Touch</h2><p>Have questions?</p>
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-envelope icon-circle"></i><div><strong>Email Us</strong><span>premkumarj18122003@gmail.com</span><span>varunvarunsp@gmail.com</span></div></div>
+                        <div class="contact-item"><i class="fas fa-phone icon-circle"></i><div><strong>Call Us</strong><span>+91 8660739248</span><span>+91 7259466420</span></div></div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <input type="text" id="contact-name" placeholder="Your Name" class="clean-input" style="margin-bottom: 1rem;" autocomplete="off">
+                    <input type="email" id="contact-email" placeholder="Your Email" class="clean-input" style="margin-bottom: 1rem;" autocomplete="off">
+                    <textarea id="contact-message" placeholder="Message" class="clean-input" style="margin-bottom: 1rem; height: 100px;"></textarea>
+                    <button class="btn-primary" style="width: 100%;" onclick="sendContactEmail()">Send Message</button>
+                </div>
+            </div>
+        </section>
+        <section id="developers" class="landing-section" style="background: #f8fafc;">
+            <div class="section-header">
+                <h2>Meet the Team</h2>
+                <p>The brilliant minds behind AIVARA.</p>
+            </div>
+            
+            <div class="dev-container">
+                <div class="glass-card dev-card guide-card">
+                    <div class="dev-avatar guide-avatar"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Ms. Shivani Kumari K</h3>
+                    <span class="dev-role">Project Guide</span>
+                    <p>Guiding light & Mentor</p>
+                </div>
+
+                <div class="dev-grid">
+                    <div class="glass-card dev-card">
+                        <div class="dev-avatar"><i class="fas fa-code"></i></div>
+                        <h3>Prem Kumar J</h3>
+                        <span class="dev-role">Developer</span>
+                    </div>
+                    <div class="glass-card dev-card">
+                        <div class="dev-avatar"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Varun      S P</h3>
+                        <span class="dev-role">Developer</span>
+                    </div>
+                    <div class="glass-card dev-card">
+                        <div class="dev-avatar"><i class="fas fa-terminal"></i></div>
+                        <h3>Shivanand Navi</h3>
+                        <span class="dev-role">Developer</span>
+                    </div>
+                    <div class="glass-card dev-card">
+                        <div class="dev-avatar"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Sakshitha Talwar</h3>
+                        <span class="dev-role">Developer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="landing-footer"><p>© 2025 AIVARA AI Health. All rights reserved.</p></footer>
+    </div>
+
+    <div id="dashboard-view" class="hidden">
+        <div class="dashboard-container">
+            <aside class="sidebar glass animate-slide-right">
+                <div class="sidebar-top">
+                    <div class="sidebar-brand"><div class="brand-icon"><i class="fas fa-heartbeat"></i></div><h2>AIVARA</h2></div>
+                    <div class="sidebar-profile"><img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="User" class="profile-avatar" id="sidebar-avatar"><div class="profile-info"><h4 id="sidebar-username">User</h4><small style="color: #10b981;">● Online</small></div></div>
+                </div>
+                <ul class="menu">
+                    <li onclick="switchTab('home')" class="active" id="tab-home"><div class="menu-icon icon-blue"><i class="fas fa-home"></i></div><span>Home</span></li>
+                    <li onclick="switchTab('reminders')" id="tab-reminders"><div class="menu-icon icon-red"><i class="fas fa-pills"></i></div><span>Reminders</span></li>
+                    <li onclick="switchTab('schedules')" id="tab-schedules"><div class="menu-icon icon-purple"><i class="fas fa-calendar-alt"></i></div><span>Schedules</span></li>
+                    <li onclick="switchTab('chat')" id="tab-chat"><div class="menu-icon icon-orange"><i class="fas fa-robot"></i></div><span>AI Chatbot</span></li>
+                    <li onclick="switchTab('tracking')" id="tab-tracking"><div class="menu-icon icon-green"><i class="fas fa-chart-pie"></i></div><span>Tracking</span></li>
+                    <li onclick="switchTab('history')" id="tab-history"><div class="menu-icon icon-gray"><i class="fas fa-history"></i></div><span>History</span></li>
+                    <li onclick="switchTab('settings')" id="tab-settings"><div class="menu-icon icon-blue"><i class="fas fa-cog"></i></div><span>Settings</span></li>
+                    <li onclick="logout()" class="logout-item"><div class="menu-icon icon-red" style="background: transparent; color: #ef4444;"><i class="fas fa-sign-out-alt"></i></div><span>Logout</span></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <div id="view-home" class="tab-view">
+                    <div class="home-header animate-fade"><div><h2 id="greeting-text">Hello!</h2><p>Here's your daily health overview.</p></div><div class="date-badge" id="current-date">...</div></div>
+                    <div class="home-grid">
+                        <div class="glass-card action-card card-blue home-anim delay-1" onclick="switchTab('reminders')"><div class="card-icon"><i class="fas fa-pills"></i></div><div class="card-content"><h3>Medicines</h3><p>Manage doses</p><button class="btn-card">Open <i class="fas fa-arrow-right"></i></button></div></div>
+                        <div class="glass-card action-card card-purple home-anim delay-2" onclick="switchTab('schedules')"><div class="card-icon"><i class="fas fa-calendar-check"></i></div><div class="card-content"><h3>Schedules</h3><p>Track events</p><button class="btn-card">View <i class="fas fa-arrow-right"></i></button></div></div>
+                        <div class="glass-card action-card card-orange home-anim delay-3" onclick="switchTab('chat')"><div class="card-icon"><i class="fas fa-robot"></i></div><div class="card-content"><h3>AI Chatbot</h3><p>Ask health AI</p><button class="btn-card">Chat <i class="fas fa-comment-dots"></i></button></div></div>
+                        <div class="glass-card tip-card home-anim delay-4"><div class="tip-icon"><i class="fas fa-lightbulb"></i></div><div><h3>Health Tip</h3><p>"Drink 8 glasses of water today."</p></div></div>
+                        <div class="glass-card tip-card home-anim delay-5"><div class="tip-icon" style="background:#ecfccb; color:#65a30d;"><i class="fas fa-leaf"></i></div><div><h3>Wellness Goal</h3><p>15 mins of Yoga.</p></div></div>
+                        <div class="glass-card tip-card home-anim delay-6"><div class="tip-icon" style="background:#cffafe; color:#0891b2;"><i class="fas fa-shoe-prints"></i></div><div><h3>Step Counter</h3><p>Daily Activity Tracker</p></div></div>
+                    </div>
+                    <h3 style="margin: 2rem 0 1rem; color: #1e293b;" class="home-anim delay-7">🚀 Coming Soon</h3>
+                    <div class="updates-grid home-anim delay-8">
+                        <div class="glass-card update-card"><div class="update-icon"><i class="fas fa-tint"></i></div><div class="update-text"><h4>Water</h4><small>Hydration</small></div><span class="badge-soon">Soon</span></div>
+                        <div class="glass-card update-card"><div class="update-icon" style="background:#dcfce7; color:#16a34a;"><i class="fas fa-carrot"></i></div><div class="update-text"><h4>Diet</h4><small>Calories</small></div><span class="badge-soon">Soon</span></div>
+                        <div class="glass-card update-card"><div class="update-icon" style="background:#fee2e2; color:#ef4444;"><i class="fas fa-heartbeat"></i></div><div class="update-text"><h4>Heart</h4><small>BPM</small></div><span class="badge-soon">Soon</span></div>
+                        <div class="glass-card update-card"><div class="update-icon" style="background:#e0f2fe; color:#0284c7;"><i class="fas fa-walking"></i></div><div class="update-text"><h4>Steps</h4><small>Counter</small></div><span class="badge-soon">Soon</span></div>
+                    </div>
+                </div>
+                <div id="view-reminders" class="tab-view hidden"><h2 style="color: #2563EB; margin-bottom: 1.5rem;">Medication Schedule</h2><div class="glass-card animate-up" style="padding: 2rem; background: white;"><h3 id="reminder-form-title" style="color: #1e40af; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-plus-circle"></i> Add Medicine</h3><div class="blue-form-box"><form id="reminder-form"><div class="input-group"><i class="fas fa-prescription-bottle-alt input-icon-inside"></i><input type="text" id="med-name" placeholder="Medicine Name" required class="clean-input with-icon"></div><div class="input-row"><input type="text" id="med-dose" placeholder="Dose" class="clean-input" style="flex: 1;"><input type="time" id="med-time" required class="clean-input" style="width: 140px;"></div><div class="input-row"><select id="med-freq" class="clean-input" style="flex: 1;"><option value="Daily">Daily</option><option value="Once">Once</option><option value="Weekly">Weekly</option></select><input type="text" id="med-notes" placeholder="Notes" class="clean-input" style="flex: 1;"></div><button type="submit" id="rem-submit-btn" class="btn-primary full-width" style="margin-top: 0.5rem;">Set Reminder</button><button type="button" id="rem-cancel-btn" class="btn-outline full-width hidden" style="width: 100%; margin-top: 10px;" onclick="resetReminderForm()">Cancel Edit</button></form></div><h4 style="color: #1e40af; margin: 2.5rem 0 1rem;">Current Reminders</h4><div id="reminders-list" class="reminders-list"></div></div></div>
+                <div id="view-schedules" class="tab-view hidden"><h2 style="color: #2563EB; margin-bottom: 1.5rem;">My Schedules</h2><div class="glass-card animate-up" style="padding: 2rem; background: white;"><h3 id="schedule-form-title" style="color: #1e40af; margin-bottom: 1rem;">Set Schedule</h3><div class="blue-form-box"><form id="schedule-form"><div class="input-group" style="margin-bottom: 1rem;"><input type="text" id="sch-event" placeholder="Event Name" required class="clean-input"></div><div class="input-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;"><input type="date" id="sch-date" required class="clean-input" style="flex:1;"><input type="text" id="sch-loc" placeholder="Location" required class="clean-input" style="flex:1;"></div><div class="input-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;"><input type="time" id="sch-start" required class="clean-input" style="flex:1;"><input type="time" id="sch-end" required class="clean-input" style="flex:1;"></div><div class="input-group" style="margin-bottom: 1rem;"><label style="font-size:0.9rem; color:#1e40af;">🔔 Alert Time</label><input type="time" id="sch-remind-time" required class="clean-input" style="border:1px solid #2563EB;"></div><div class="input-group" style="margin-bottom: 1.5rem;"><input type="text" id="sch-note" placeholder="Note" class="clean-input"></div><button type="submit" id="sch-submit-btn" class="btn-primary full-width" style="width: 100%;">Set Schedule</button><button type="button" id="sch-cancel-btn" class="btn-outline full-width hidden" style="width: 100%; margin-top: 10px;" onclick="resetScheduleForm()">Cancel</button></form></div><h4 style="color: #1e40af; margin: 2rem 0 1rem;">Upcoming Schedules</h4><div id="schedules-list"></div></div></div>
+                
+                <div id="view-chat" class="tab-view hidden">
+                    <div class="glass-card chat-interface animate-up">
+                        <div class="chat-header">
+                            <div class="chat-bot-info">
+                                <div class="bot-avatar">
+                                    <img src="images/chatbot.jpg" alt="Bot" class="floating-img" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%;">
+                                    <div class="status-dot"></div>
+                                </div>
+                                <div>
+                                    <h3 style="margin:0; font-size: 1rem; color: #1e293b;">AIVARA Assistant</h3>
+                                    <small style="color: #10b981; font-size: 0.75rem;">● Online</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-ellipsis-v" style="color: #94a3b8; cursor: pointer;"></i>
+                        </div>
+                        <div id="chat-box" class="chat-box"><div class="msg bot-msg"><div>Hello! 👋 I am AIVARA. Ask me about symptoms (e.g. Fever, Pain).</div></div></div>
+                        <div class="chat-chips"><span onclick="quickReply('Headache')">🤕 Headache</span><span onclick="quickReply('Fever')">🌡️ Fever</span><span onclick="quickReply('Cold')">🤧 Cold</span><span onclick="quickReply('Anxiety')">😰 Anxiety</span><span onclick="quickReply('Stomach Ache')">🤢 Stomach</span></div>
+                        <div class="chat-input-area"><input type="text" id="user-input" placeholder="Type your symptoms..." onkeypress="handleEnter(event)"><button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button></div>
+                    </div>
+                </div>
+
+                <div id="view-tracking" class="tab-view hidden"><h2 style="color: #2563EB; margin-bottom: 1.5rem;">Health Analytics</h2><div class="tracking-grid-top animate-up"><div class="glass-card" style="background: white; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center;"><h3 style="margin-bottom: 1rem;">Today's Intake</h3><div style="position: relative; height: 180px; width: 100%; display: flex; justify-content: center;"><canvas id="gaugeChart"></canvas><div id="gauge-text" style="position: absolute; bottom: 40px; font-size: 2.5rem; font-weight: 700; color: #2563EB;">0%</div></div><div id="tracking-insight" style="text-align: center; margin-top: -20px; padding: 1rem; background: #f8fafc; border-radius: 12px; width: 100%;"><div id="insight-emoji" style="font-size: 2.5rem;">😐</div><p id="insight-text">No data.</p></div></div><div class="glass-card" style="background: white; padding: 2rem;"><h3 style="margin-bottom: 1rem;">Weekly Adherence</h3><div style="height: 250px;"><canvas id="weeklyChart"></canvas></div></div></div><div class="tracking-grid-bottom animate-up delay-2"><div class="glass-card coming-soon-card"><div class="cs-content"><i class="fas fa-tint fa-3x" style="color: #3b82f6;"></i><h3>Water Intake</h3><p>Hydration</p></div><div class="cs-badge">Soon</div></div><div class="glass-card coming-soon-card"><div class="cs-content"><i class="fas fa-carrot fa-3x" style="color: #10b981;"></i><h3>Diet Plan</h3><p>Calories</p></div><div class="cs-badge">Soon</div></div><div class="glass-card coming-soon-card"><div class="cs-content"><i class="fas fa-heartbeat fa-3x" style="color: #ef4444;"></i><h3>Heart Rate</h3><p>BPM Monitor</p></div><div class="cs-badge">Soon</div></div><div class="glass-card coming-soon-card"><div class="cs-content"><i class="fas fa-shoe-prints fa-3x" style="color: #0891b2;"></i><h3>Step Count</h3><p>Activity</p></div><div class="cs-badge">Soon</div></div></div></div>
+                <div id="view-history" class="tab-view hidden"><h2 style="color: #2563EB; margin-bottom: 1.5rem;">Activity Logs</h2><div class="history-grid animate-up"><div class="glass-card" style="padding: 1.5rem; background: white; min-height: 400px;"><div class="history-header"><h3>Medicine Log</h3><button class="btn-clear" onclick="clearHistory('Medicine')">Clear</button></div><ul id="history-meds-list" class="history-list-ul"></ul></div><div class="glass-card" style="padding: 1.5rem; background: white; min-height: 400px;"><div class="history-header"><h3>Schedule Log</h3><button class="btn-clear" onclick="clearHistory('Schedule')">Clear</button></div><ul id="history-sch-list" class="history-list-ul"></ul></div></div></div>
+                <div id="view-settings" class="tab-view hidden"><h2 style="color: #2563EB; margin-bottom: 1.5rem;">Settings</h2><div class="settings-grid animate-up"><div class="glass-card settings-card"><h3 class="setting-header"><i class="fas fa-user-circle"></i> Account</h3><div class="input-group-settings"><label>Full Name</label><input type="text" id="profile-name" class="clean-input"></div><div class="input-row"><div class="input-group-settings"><label>Age</label><input type="number" id="profile-age" class="clean-input"></div><div class="input-group-settings"><label>Gender</label><select id="profile-gender" class="clean-input"><option value="Male">Male</option><option value="Female">Female</option></select></div></div><div class="input-group-settings"><label>Email</label><input type="email" id="profile-email" class="clean-input" disabled></div><div class="settings-actions"><button class="btn-outline small" onclick="changeEmail()">Change Email</button><button class="btn-outline small" onclick="changePassword()">Change Password</button></div><button class="btn-primary full-width" style="margin-top:1rem;" onclick="saveProfile()">Save Changes</button></div><div class="glass-card settings-card"><h3 class="setting-header"><i class="fas fa-sliders-h"></i> Preferences</h3><div class="setting-item"><div class="setting-label"><i class="fas fa-moon"></i> <span>Dark Theme</span></div><label class="switch"><input type="checkbox" id="theme-toggle" onchange="toggleTheme()"><span class="slider round"></span></label></div><div class="setting-item"><div class="setting-label"><i class="fas fa-volume-up"></i> <span>Voice Alerts</span></div><label class="switch"><input type="checkbox" id="voice-toggle" checked onchange="toggleVoice()"><span class="slider round"></span></label></div><div class="setting-item"><div class="setting-label"><i class="fas fa-vibration"></i> <span>Vibration</span></div><label class="switch"><input type="checkbox" id="vibrate-toggle" checked onchange="toggleVibrate()"><span class="slider round"></span></label></div></div><div class="glass-card settings-card"><h3 class="setting-header"><i class="fas fa-info-circle"></i> Support</h3><ul class="support-list"><li onclick="showSupport('about')">About AIVARA <span class="version-badge">v1.0</span></li><li onclick="showSupport('contact')">Contact Support <i class="fas fa-chevron-right"></i></li><li onclick="showSupport('faq')">FAQs <i class="fas fa-chevron-right"></i></li><li onclick="showSupport('bug')">Report a Bug <i class="fas fa-chevron-right"></i></li><li onclick="showSupport('rate')">Rate Experience <i class="fas fa-star" style="color:gold"></i></li></ul></div><div class="glass-card settings-card danger-card"><h3 class="setting-header" style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Danger Zone</h3><button class="btn-primary" style="background: #ef4444; width: 100%; border:none;" onclick="resetApp()">Reset All Data</button></div></div></div>
+            </main>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="modal"><div class="modal-content glass" style="width: 380px;"><div id="login-view"><div style="margin-bottom: 1rem; color: #2563EB; font-size: 3rem;"><i class="fas fa-user-circle"></i></div><h2 style="color: #1e293b; margin-bottom: 0.5rem;">Welcome Back</h2><p style="color: #64748b; margin-bottom: 1.5rem;">Please login to your account</p><div class="input-group-auth"><i class="fas fa-user"></i><input type="text" id="login-username" class="clean-input with-icon" placeholder="Username"></div><div class="input-group-auth"><i class="fas fa-lock"></i><input type="password" id="login-password" class="clean-input with-icon" placeholder="Password"></div><p id="login-error" style="color: #ef4444; font-size: 0.9rem; margin-bottom: 10px; display: none;"></p><button class="btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="handleLogin()">Login</button><div class="auth-links"><span onclick="switchAuth('signup')">Create Account</span><span id="forgot-link" class="hidden" onclick="switchAuth('forgot')">Forgot Password?</span></div></div><div id="signup-view" class="hidden"><h2 style="color: #1e293b; margin-bottom: 0.5rem;">Create Account</h2><p style="color: #64748b; margin-bottom: 1.5rem;">Join AIVARA today</p><div class="input-group-auth"><i class="fas fa-user"></i><input type="text" id="signup-username" class="clean-input with-icon" placeholder="Username"></div><div class="input-group-auth"><i class="fas fa-envelope"></i><input type="email" id="signup-email" class="clean-input with-icon" placeholder="Email"></div><div class="input-group-auth"><i class="fas fa-lock"></i><input type="password" id="signup-password" class="clean-input with-icon" placeholder="Password"></div><button class="btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="handleSignup()">Sign Up</button><div class="auth-links"><span onclick="switchAuth('login')">Back to Login</span></div></div><div id="forgot-view" class="hidden"><h2 style="color: #1e293b; margin-bottom: 0.5rem;">Recover Account</h2><p style="color: #64748b; margin-bottom: 1.5rem;">Enter your email to recover credentials</p><div class="input-group-auth"><i class="fas fa-envelope"></i><input type="email" id="recover-email" class="clean-input with-icon" placeholder="Registered Email"></div><button class="btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="handleRecovery()">Send Credentials</button><div class="auth-links"><span onclick="switchAuth('login')">Back to Login</span></div></div></div></div>
+    <div id="alert-modal" class="modal"><div class="modal-content glass"><i class="fas fa-bell fa-3x icon-yellow"></i><h2 id="alert-title">Alert!</h2><p id="alert-msg">Notification text.</p><div class="modal-actions" id="modal-btns"></div></div></div>
+    <div id="toast-container" class="toast hidden"><div class="toast-icon"><i class="fas fa-check-circle"></i></div><div class="toast-msg" id="toast-message">Success!</div></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
